@@ -18,28 +18,26 @@
 	<!-- ■ViewResolver群 -->
 	<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 
-	<!-- 通常のViewResolver -->
-	<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	        <property name="prefix" value="/WEB-INF/view/"/>
-	        <property name="suffix" value=".jsp"/>
-	</bean>
-
-	<!-- ベーシックレイアウトViewResolver -->
-
-
-	<!-- TODO:グローバルBinderの登録。。。いくらググってもこのやり方。。。ウンともスンとも言わない。。。。-->
-	<!--
-	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-		<property name="cacheSeconds" value="0"/>
-		<property name="webBindingInitializer">
-			<bean class="jp.co.sample.framework.bind.support.GlobalBindingInitializer" />
+	<!-- 優先度①：TilesのViewResolver -->
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/layouts/**Tiles.xml</value>
+				<value>/WEB-INF/parts/**Tiles.xml</value>
+				<value>/WEB-INF/view/**/**Tiles.xml</value>
+			</list>
 		</property>
 	</bean>
-	-->
+	<bean id="urlBasedViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="order" value="1"/>
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+	</bean>
 
-	<!-- グローバルExceptionHandlerの登録 ●非推奨　⇒　@ControllerAdviceで行う。● -->
-	<!--
-	<bean class="jp.co.sample.framework.web.servlet.GlobalExceptionHandler" />
-	-->
+	<!-- 優先度②：通常のViewResolver -->
+	<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="order" value="2"/>
+		<property name="prefix" value="/WEB-INF/view/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
 
 </beans>
