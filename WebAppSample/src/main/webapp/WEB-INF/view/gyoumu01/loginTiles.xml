@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+ <tiles-definitions>
+
+	<definition name="gyoumu01/login" extends="basicLayout">
+		<put-attribute name="pageTitle" value="ログイン画面" />
+		<put-attribute name="mainContents" value="/WEB-INF/view/gyoumu01/login.jsp" />
+	</definition>
+
+ </tiles-definitions>
