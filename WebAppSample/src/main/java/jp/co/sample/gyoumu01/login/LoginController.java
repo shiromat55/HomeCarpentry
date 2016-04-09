@@ -12,13 +12,14 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  * 【ログイン画面】Controller
- * @author 健
+ *
+ * @see LoginController
+ * @author shiromat55
  *
  */
 @Controller
@@ -27,6 +28,7 @@ public class LoginController {
 
 	/**
 	 * 型変換初期化処理。
+	 *
 	 * @param binder バインダー
 	 */
 	@InitBinder("formModel")
@@ -37,16 +39,15 @@ public class LoginController {
 		//binder.setDisallowedFields("actionDate");
 	}
 
-
 	/**
 	 * モデルの前処理。<br/>
 	 * ここは、Modelを生成し、返却する処理をコーディングする処理。<br/>
-	 * よって、引数に@ModelAttribute("formModel")なんていう余計な事をする かつ InitBiderを削除した瞬間、なぜか404エラーが発生してこのクラスにすら到達しない意味不明現象が起きるので注意。
-	 * @param formModel
+	 * だからかは分からないが、引数に@ModelAttribute("formModel")なんていう余計な事をする かつ InitBiderを削除した瞬間、なぜか404エラーが発生してこのクラスにすら到達しない意味不明現象が起きるので注意。
+	 *
 	 * @return {@link LoginFormModel}
 	 */
 	@ModelAttribute("formModel")
-	public LoginFormModel newRequest(@RequestParam(required = false, value="id") String id) {
+	public LoginFormModel newRequest() {
 
 		LoginFormModel result = new LoginFormModel();
 
@@ -57,13 +58,13 @@ public class LoginController {
 
 	/**
 	 * 初期処理。
+	 *
+	 * @param formModel フォームモデル
 	 * @param model モデル
 	 * @return {@link ModelAndView}
 	 */
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView index(@ModelAttribute("formModel") LoginFormModel formModel,
-							  @RequestParam(required = false, value = "gaga") String gaga,
-							  Model model) {
+	public ModelAndView index(@ModelAttribute("formModel") LoginFormModel formModel, Model model) {
 
 		//throw new RuntimeException("ほげ、ほげほげ！！");
 
@@ -77,6 +78,7 @@ public class LoginController {
 
 	/**
 	 * ログイン処理。
+	 *
 	 * @param formModel フォームモデル
 	 * @param result バインド結果
 	 * @param model モデル

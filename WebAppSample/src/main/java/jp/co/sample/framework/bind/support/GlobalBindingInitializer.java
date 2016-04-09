@@ -14,8 +14,9 @@ import org.springframework.web.context.request.WebRequest;
  * <ul>
  * <li>{@link java.util.Date Date}</li>
  * </ul>
+ * @see GlobalBindingInitializer
  * @see WebBindingInitializer
- * @author 健
+ * @author shiromat55
  *
  */
 @Deprecated
@@ -23,6 +24,7 @@ public class GlobalBindingInitializer implements WebBindingInitializer {
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.springframework.web.bind.support.WebBindingInitializer#initBinder(org.springframework.web.bind.WebDataBinder, org.springframework.web.context.request.WebRequest)
 	 */
 	@Override
 	public void initBinder(WebDataBinder binder, WebRequest request) {

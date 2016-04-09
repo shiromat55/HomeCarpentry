@@ -7,7 +7,9 @@ import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * 【ログイン画面】FormModel
- * @author 健
+ *
+ * @see LoginFormModel
+ * @author shiromat55
  *
  */
 public class LoginFormModel {

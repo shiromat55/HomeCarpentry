@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.context.request.WebRequest;
 
 /**
- * コントローラーアドバイス。<br/>
+ * Controllerアドバイス。<br/>
  * グローバルなInitBinder機能を提供します。
- * @author 健
+ *
+ * @see ControllerAdviceForInitBinder
+ * @author shiromat55
  *
  */
 @ControllerAdvice

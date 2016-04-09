@@ -8,8 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  * グローバルExceptionHandler<br/>
+ *
+ * @see GlobalExceptionHandler
  * @see HandlerExceptionResolver
- * @author 健
+ * @author shiromat55
  *
  */
 @Deprecated
@@ -17,6 +19,7 @@ public class GlobalExceptionHandler implements HandlerExceptionResolver {
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.springframework.web.servlet.HandlerExceptionResolver#resolveException(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.lang.Object, java.lang.Exception)
 	 */
 	@Override
 	public ModelAndView resolveException(HttpServletRequest request,

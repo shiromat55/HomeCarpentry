@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * コントローラーアドバイス。<br/>
+ * Controllerアドバイス。<br/>
  * グローバルな例外ハンドリング機能を提供します。
- * @author 健
+ * @see ControllerAdviceForExceptionHandler
+ * @author shiromat55
  *
  */
 @ControllerAdvice
@@ -15,8 +16,9 @@ public class ControllerAdviceForExceptionHandler {
 
 	/**
 	 * {@link java.lang.Exception Exception}クラスハンドリング処理。
-	 * @param ex 例外クラス
-	 * @return ModelAndView
+	 *
+	 * @param ex 例外エラー
+	 * @return {@link ModelAndView}
 	 */
 	@ExceptionHandler(Exception.class)
 	public ModelAndView exception(Exception ex) {
