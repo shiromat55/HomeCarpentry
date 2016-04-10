@@ -7,18 +7,18 @@
 
 	<display-name>WebAppSample</display-name>
 
- 	<!-- application-config.xml -->
+ 	<!-- context-param：application-config.xml -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring/application-config.xml</param-value>
 	</context-param>
 
-	<!-- ブートストラップリスナー -->
+	<!-- Listener：ContextLoaderListener -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- エンコードフィルター -->
+	<!-- Filter：CharacterEncodingFilter -->
 	<filter>
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -32,7 +32,12 @@
 		</init-param>
 	</filter>
 
-	<!-- Spring MVCの中心的な役割を担うサーブレット。クライアントからのリクエストをコントローラーのリクエストハンドラとマッピングしたりしている。 -->
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Servlet：DispatcherServlet -->
 	<servlet>
 		<servlet-name>dispatcherServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

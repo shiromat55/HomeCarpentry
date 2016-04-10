@@ -4,6 +4,20 @@
  <tiles-definitions>
 
  	<definition name="basicLayout" template="/WEB-INF/layouts/basicLayout.jsp">
+
+ 		<!-- stylesheet -->
+		<put-list-attribute name="generalStylesheet">
+			<add-attribute value="/resources/css/external/jquery/jquery-ui-1.11.4.css" />
+			<add-attribute value="/resources/css/external/jquery/jquery-ui.structure-1.11.4.css" />
+			<add-attribute value="/resources/css/external/jquery/jquery-ui.theme-1.11.4.css" />
+		</put-list-attribute>
+
+ 		<!-- javascript -->
+ 		<put-list-attribute name="generalJavascript">
+ 			<add-attribute value="/resources/js/external/jquery/jquery-2.2.3.min.js" />
+ 			<add-attribute value="/resources/js/external/jquery/jquery-ui.min-1.11.4.js" />
+ 		</put-list-attribute>
+
  	</definition>
 
  </tiles-definitions>

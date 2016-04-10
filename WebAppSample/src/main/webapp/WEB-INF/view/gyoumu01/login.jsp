@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -10,6 +9,9 @@
 <p>${message}</p>
 
 <form:form modelAttribute="formModel">
+
+	<%-- JQueryUIのDatePickerを使ってみる --%>
+	<input type="text" id="dateText" size="20" />
 
 	<%-- InitBinderでバインドを拒否するためのサンプル --%>
 	<form:hidden path="actionDate" />
