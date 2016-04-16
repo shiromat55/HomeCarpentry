@@ -1,9 +1,6 @@
-package jp.co.sample.gyoumu01.login;
+package jp.co.sample.formmodel.app;
 
 import java.util.Date;
-
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * 【ログイン画面】FormModel
@@ -15,12 +12,9 @@ import org.hibernate.validator.constraints.NotBlank;
 public class LoginFormModel {
 
 	/** ログインID */
-	@NotBlank(message = "入力は必須です。")
 	private String id;
 
 	/** パスワード */
-	@NotBlank(message = "入力は必須です。")
-	@Length(min = 6, max = 12, message = "{min}桁～{max}桁で入力して下さい。")
 	private String password;
 
 	/** アクション実行日 */

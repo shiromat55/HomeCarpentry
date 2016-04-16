@@ -12,6 +12,7 @@
 
 	<!-- アノテーションによるBean登録を許可し、ベースパッケージを指定する。 -->
 	<mvc:annotation-driven />
+	<!--<context:annotation-config />-->
 	<context:component-scan base-package="jp.co.sample" />
 
 	<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
@@ -22,7 +23,7 @@
 	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 		<property name="definitions">
 			<list>
-				<value>/WEB-INF/layouts/**Tiles.xml</value>
+				<value>/WEB-INF/view/layouts/**Tiles.xml</value>
 				<value>/WEB-INF/view/**/**Tiles.xml</value>
 			</list>
 		</property>
@@ -45,5 +46,10 @@
 
 	<!-- リソースマッピング -->
 	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
+
+	<!-- メッセージ -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="Message" />
+	</bean>
 
 </beans>

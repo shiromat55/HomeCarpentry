@@ -3,22 +3,22 @@
 
  <tiles-definitions>
 
-	<definition name="gyoumu01/login" extends="basicLayout">
+	<definition name="hogehoge" extends="basicLayout">
 
 		<!-- ページタイトル -->
 		<put-attribute name="pageTitle" value="ログイン画面"/>
 
 		<!-- JSP -->
-		<put-attribute name="mainContents" value="/WEB-INF/view/gyoumu01/login.jsp" />
+		<put-attribute name="mainContents" value="/WEB-INF/view/app/login.jsp" />
 
 		<!-- stylesheet -->
 		<put-list-attribute name="personalStylesheet">
-			<add-attribute value="/resources/css/gyoumu01/login.css" />
+			<add-attribute value="/resources/css/app/login.css" />
 		</put-list-attribute>
 
  		<!-- javascript -->
  		<put-list-attribute name="personalJavascript">
- 			<add-attribute value="/resources/js/gyoumu01/login.js" />
+ 			<add-attribute value="/resources/js/app/login.js" />
  		</put-list-attribute>
 
 	</definition>

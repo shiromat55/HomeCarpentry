@@ -1,4 +1,4 @@
-package jp.co.sample.error.ohererror;
+package jp.co.sample.controller.error;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -13,36 +13,37 @@
 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-		<%-- タイトル --%>
+		<!-- タイトル -->
 		<title>
 			<tiles:getAsString name="pageTitle" />
 		</title>
 
-		<%-- stylesheet(generalStylesheet) --%>
-		<tiles:importAttribute name="generalStylesheet" />
+		<!-- stylesheet(generalStylesheet) -->
+		<tiles:importAttribute name="generalStylesheet" ignore="true" />
 		<c:if test="${!empty generalStylesheet}">
 			<c:forEach var="item" items="${generalStylesheet}" varStatus="status">
 				<link href="<spring:url value="${item}"/>" rel="stylesheet" />
 			</c:forEach>
 		</c:if>
 
-		<%-- stylesheet(personalStylesheet) --%>
+		<!-- stylesheet(personalStylesheet) -->
+		<tiles:importAttribute name="personalStylesheet" ignore="true" />
 		<c:if test="${!empty personalStylesheet}">
 			<c:forEach var="item" items="${personalStylesheet}" varStatus="status">
 				<link href="<spring:url value="${item}"/>" rel="stylesheet" />
 			</c:forEach>
 		</c:if>
 
-		<%-- javascript(generalJavascript) --%>
-		<tiles:importAttribute name="generalJavascript" />
+		<!-- javascript(generalJavascript) -->
+		<tiles:importAttribute name="generalJavascript" ignore="true" />
 		<c:if test="${!empty generalJavascript}">
 			<c:forEach var="item" items="${generalJavascript}" varStatus="status">
 				<script type="text/javascript" charset="UTF-8" src="<spring:url value="${item}"/>"></script>
 			</c:forEach>
 		</c:if>
 
-		<%-- javascript(personalJavascript) --%>
-		<tiles:importAttribute name="personalJavascript" />
+		<!-- javascript(personalJavascript) -->
+		<tiles:importAttribute name="personalJavascript" ignore="true" />
 		<c:if test="${!empty personalJavascript}">
 			<c:forEach var="item" items="${personalJavascript}" varStatus="status">
 				<script type="text/javascript" charset="UTF-8" src="<spring:url value="${item}"/>"></script>
