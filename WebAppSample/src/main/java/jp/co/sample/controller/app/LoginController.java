@@ -1,9 +1,9 @@
 package jp.co.sample.controller.app;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,9 +19,10 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import jp.co.sample.beans.LoginUserInfoBean;
+import jp.co.sample.beans.SampleBean;
 import jp.co.sample.common.util.MessageUtil;
-import jp.co.sample.constants.MessageCode;
-import jp.co.sample.formmodel.app.LoginFormModel;
+import jp.co.sample.constants.Message;
+import jp.co.sample.model.app.LoginFormModel;
 
 /**
  * 【ログイン画面】Controller
@@ -56,7 +57,7 @@ public class LoginController {
 	public void initBinder(WebDataBinder binder) {
 
 		// ログインID、パスワードのみバインドを許可する。
-		binder.setAllowedFields("id", "password");
+		//binder.setAllowedFields("id", "password");
 		//binder.setDisallowedFields("actionDate");
 	}
 
@@ -96,9 +97,20 @@ public class LoginController {
 
 		ModelAndView mv = new ModelAndView();
 
+		formModel.setCaeTest("abc12345");
+
+		formModel.setSampleList(new ArrayList<>());
+
+		SampleBean sample = new SampleBean();
+		sample.setHoge("hoge");
+		formModel.getSampleList().add(sample);
+
+		sample = new SampleBean();
+		sample.setHoge("fuga");
+		formModel.getSampleList().add(sample);
+
 		mv.addObject("formModel", formModel);
 		mv.setViewName("app/login");
-
 		return mv;
 	}
 
@@ -113,7 +125,7 @@ public class LoginController {
 	 * @return {@link ModelAndView}
 	 */
 	@RequestMapping(params = "action_login", method = RequestMethod.POST)
-	public ModelAndView login(@Valid @ModelAttribute("formModel") LoginFormModel formModel,
+	public ModelAndView login(@ModelAttribute("formModel") LoginFormModel formModel,
 							  BindingResult result,
 							  WebRequest webRequest,
 							  HttpSession session,
@@ -159,12 +171,8 @@ public class LoginController {
 	 */
 	private boolean hasLoginError(LoginFormModel formModel, BindingResult result) {
 
-		/*--------------------------------------------------------------
-		 * 単項目チェック
-		 --------------------------------------------------------------*/
-
+		// 単項目チェック
 		this.hasLoginTankomokuError(formModel, result);
-
 		return result.hasErrors();
 
 	}
@@ -178,11 +186,11 @@ public class LoginController {
 	private boolean hasLoginTankomokuError(LoginFormModel formModel, BindingResult result) {
 
 		if (StringUtils.isEmpty(formModel.getId())) {
-			MessageUtil.rejectValue(result, "id", MessageCode.W_0001, "ログインID");
+			MessageUtil.rejectValue(result, "id", Message.W_0001, "ログインID");
 		}
 
 		if (StringUtils.isEmpty(formModel.getPassword())) {
-			MessageUtil.rejectValue(result, "password", MessageCode.W_0001, "パスワード");
+			MessageUtil.rejectValue(result, "password", Message.W_0001, "パスワード");
 		}
 
 		return result.hasErrors();

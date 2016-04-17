@@ -3,11 +3,11 @@ package jp.co.sample.constants;
 /**
  * メッセージコード列挙体。
  *
- * @see MessageCode
+ * @see Message
  * @author shiromat55
  *
  */
-public enum MessageCode {
+public enum Message {
 
 	/** {0}は必須です。 */
 	W_0001("W_0001"),
@@ -22,7 +22,7 @@ public enum MessageCode {
 	 * コンストラクタ。
 	 * @param code メッセージコード
 	 */
-	private MessageCode(String code) {
+	private Message(String code) {
 		this.code = code;
 	}
 

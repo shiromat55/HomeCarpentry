@@ -2,6 +2,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
@@ -35,6 +36,13 @@
 
 			<%-- InitBinderでバインドを拒否するためのサンプル --%>
 			<form:hidden path="actionDate" />
+
+			<%--  --%>
+			<form:hidden path="caeTest" />
+
+			<c:forEach var="item" items="${formModel.sampleList}" varStatus="status">
+				<input type="hidden" id="sampleList[${status.index}].hoge" name="sampleList[${status.index}].hoge" value="${item.hoge}" />
+			</c:forEach>
 
 			<table border="1">
 

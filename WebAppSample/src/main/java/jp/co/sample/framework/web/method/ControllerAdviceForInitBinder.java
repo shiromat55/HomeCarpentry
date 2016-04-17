@@ -29,7 +29,6 @@ public class ControllerAdviceForInitBinder {
 	public void initBinder(WebDataBinder binder, WebRequest request) {
 
 		this.registCustomDateEditor(binder);
-
 	}
 
 	/**
@@ -38,7 +37,7 @@ public class ControllerAdviceForInitBinder {
 	 */
 	private void registCustomDateEditor(WebDataBinder binder) {
 
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 
 		// false：厳密な解析
 		sdf.setLenient(false);

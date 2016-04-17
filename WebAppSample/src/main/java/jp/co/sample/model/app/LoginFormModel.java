@@ -1,6 +1,10 @@
-package jp.co.sample.formmodel.app;
+package jp.co.sample.model.app;
 
 import java.util.Date;
+import java.util.List;
+
+import jp.co.sample.beans.SampleBean;
+import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
 
 /**
  * 【ログイン画面】FormModel
@@ -19,6 +23,14 @@ public class LoginFormModel {
 
 	/** アクション実行日 */
 	private Date actionDate;
+
+	/** 複合化／暗号化項目 */
+	@ComplexAndEncryption
+	private String caeTest;
+
+	/**  */
+	@ComplexAndEncryption
+	private List<SampleBean> sampleList;
 
 	/**
 	 * ログインIDを取得します。
@@ -66,5 +78,37 @@ public class LoginFormModel {
 	 */
 	public void setActionDate(Date actionDate) {
 	    this.actionDate = actionDate;
+	}
+
+	/**
+	 * 複合化／暗号化項目を取得します。
+	 * @return 複合化／暗号化項目
+	 */
+	public String getCaeTest() {
+	    return caeTest;
+	}
+
+	/**
+	 * 複合化／暗号化項目を設定します。
+	 * @param caeTest 複合化／暗号化項目
+	 */
+	public void setCaeTest(String caeTest) {
+	    this.caeTest = caeTest;
+	}
+
+	/**
+	 * sampleListを取得します。
+	 * @return sampleList
+	 */
+	public List<SampleBean> getSampleList() {
+	    return sampleList;
+	}
+
+	/**
+	 * sampleListを設定します。
+	 * @param sampleList sampleList
+	 */
+	public void setSampleList(List<SampleBean> sampleList) {
+	    this.sampleList = sampleList;
 	}
 }

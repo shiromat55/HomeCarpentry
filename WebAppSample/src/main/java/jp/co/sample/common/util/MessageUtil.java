@@ -2,7 +2,7 @@ package jp.co.sample.common.util;
 
 import org.springframework.validation.BindingResult;
 
-import jp.co.sample.constants.MessageCode;
+import jp.co.sample.constants.Message;
 
 /**
  * メッセージユーティリティ。
@@ -13,7 +13,7 @@ import jp.co.sample.constants.MessageCode;
 public class MessageUtil {
 
 	/**
-	 *
+	 * エラーメッセージを設定する。
 	 * @param result バインド結果
 	 * @param filedName フィールド名
 	 * @param message メッセージコード列挙体
@@ -21,9 +21,8 @@ public class MessageUtil {
 	 */
 	public static void rejectValue(BindingResult result,
 								   String filedName,
-								   MessageCode message,
+								   Message message,
 								   String... messageParam) {
-
 
 		result.rejectValue(filedName, message.getCode(), messageParam, "メッセージが見つかりませんでした。。。");
 	}
