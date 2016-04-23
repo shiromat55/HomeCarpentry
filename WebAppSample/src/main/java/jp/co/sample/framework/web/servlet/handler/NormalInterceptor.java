@@ -7,13 +7,13 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * 【Model内プロパティ複合化・暗号化】Interceptor
+ * Interceptor
  *
- * @see ComplexAndEncryptionInterceptor
+ * @see NormalInterceptor
  * @author shiromat55
  *
  */
-public class ComplexAndEncryptionInterceptor implements HandlerInterceptor {
+public class NormalInterceptor implements HandlerInterceptor {
 
 	/**
 	 * リクエストハンドラ実行前処理。<br/>

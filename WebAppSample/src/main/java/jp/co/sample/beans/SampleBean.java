@@ -1,10 +1,17 @@
 package jp.co.sample.beans;
 
-import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
 
+/**
+ * 【サンプル】Bean
+ *
+ * @see SampleBean
+ * @author shiromat55
+ *
+ */
 public class SampleBean {
 
-	/**  */
+	/** hoge */
 	@ComplexAndEncryption
 	private String hoge;
 

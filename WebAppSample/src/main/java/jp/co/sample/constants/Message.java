@@ -1,7 +1,7 @@
 package jp.co.sample.constants;
 
 /**
- * メッセージコード列挙体。
+ * 【メッセージ】列挙体
  *
  * @see Message
  * @author shiromat55

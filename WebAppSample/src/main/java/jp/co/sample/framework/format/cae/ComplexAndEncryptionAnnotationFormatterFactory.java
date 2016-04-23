@@ -1,4 +1,4 @@
-package jp.co.sample.framework.format;
+package jp.co.sample.framework.format.cae;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -8,10 +8,10 @@ import org.springframework.format.AnnotationFormatterFactory;
 import org.springframework.format.Parser;
 import org.springframework.format.Printer;
 
-import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
 
 /**
- *
+ * 【複合化・暗号化】FormatterFactory
  *
  * @see ComplexAndEncryptionAnnotationFormatterFactory
  * @author shiromat55
@@ -19,7 +19,7 @@ import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
  */
 public class ComplexAndEncryptionAnnotationFormatterFactory implements AnnotationFormatterFactory<ComplexAndEncryption> {
 
-	/**  */
+	/** 対象フィールド型 */
 	private static final Set<Class<?>> TARGET_FIELD_TYPES;
 	static {
 		Set<Class<?>> formatTypes = new HashSet<>(1);

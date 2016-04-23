@@ -17,7 +17,7 @@ public class TopController {
 	/**
 	 * 初期処理。
 	 *
-	 * @return
+	 * @return ビュー名
 	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public String index() {

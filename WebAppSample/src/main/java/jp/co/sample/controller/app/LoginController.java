@@ -23,7 +23,7 @@ import jp.co.sample.beans.LoginUserInfoBean;
 import jp.co.sample.beans.SampleBean;
 import jp.co.sample.common.util.MessageUtil;
 import jp.co.sample.constants.Message;
-import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
 import jp.co.sample.model.app.LoginFormModel;
 
 /**
@@ -95,11 +95,10 @@ public class LoginController {
 	 * @return {@link ModelAndView}
 	 */
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView index(@ComplexAndEncryption @RequestParam("test") String param) {
+	public ModelAndView index(@ComplexAndEncryption @RequestParam(value = "test", required = false) String param,
+							  @ModelAttribute("formModel") LoginFormModel formModel) {
 
 		ModelAndView mv = new ModelAndView();
-
-		LoginFormModel formModel = new LoginFormModel();
 
 		formModel.setCaeTest("abc12345");
 

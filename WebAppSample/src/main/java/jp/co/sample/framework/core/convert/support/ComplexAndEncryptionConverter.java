@@ -3,11 +3,20 @@ package jp.co.sample.framework.core.convert.support;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.context.annotation.Description;
 import org.springframework.core.convert.TypeDescriptor;
 import org.springframework.core.convert.converter.GenericConverter;
 
-import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
 
+/**
+ * 【複合化・暗号化】Converter
+ *
+ * @see ComplexAndEncryptionConverter
+ * @author shiromat55
+ *
+ */
+@Description("個人的にはFormatterの方が分かり易いので非推奨！！")
 public class ComplexAndEncryptionConverter implements GenericConverter {
 
 	/**
@@ -36,16 +45,10 @@ public class ComplexAndEncryptionConverter implements GenericConverter {
 		if (targetType.hasAnnotation(ComplexAndEncryption.class)) {
 			// ■リクエスト → Model
 
-			final String print = "複合対象：source：%s、source.caeAnnotaion：%s、target.caeAnnotaion：%s";
-			System.out.println(String.format(print, new Object[] { source, sourceType.hasAnnotation(ComplexAndEncryption.class), targetType.hasAnnotation(ComplexAndEncryption.class) }));
-
 			return "複：" + source + "：複";
 
 		} else if (sourceType.hasAnnotation(ComplexAndEncryption.class)) {
 			// ■レスポンス ← Model
-
-			final String print = "暗号対象：source：%s、source.caeAnnotaion：%s、target.caeAnnotaion：%s";
-			System.out.println(String.format(print, new Object[] { source, sourceType.hasAnnotation(ComplexAndEncryption.class), targetType.hasAnnotation(ComplexAndEncryption.class) }));
 
 			return "暗：" + source + "：暗";
 

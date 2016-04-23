@@ -37,9 +37,6 @@
 			<%-- InitBinderでバインドを拒否するためのサンプル --%>
 			<form:hidden path="actionDate" />
 
-			<%-- --%>
-			<form:hidden path="sampleDate"/>
-
 			<%--  --%>
 			<form:hidden path="caeTest" />
 

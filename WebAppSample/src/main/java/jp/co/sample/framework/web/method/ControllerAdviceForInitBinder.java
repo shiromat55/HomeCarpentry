@@ -22,8 +22,8 @@ public class ControllerAdviceForInitBinder {
 
 	/**
 	 * 型変換初期化処理。
-	 * @param binder バインダー
-	 * @param request リクエスト
+	 * @param binder {@link WebDataBinder バインダー}
+	 * @param request {@link WebRequest リクエスト}
 	 */
 	@InitBinder
 	public void initBinder(WebDataBinder binder, WebRequest request) {
@@ -33,7 +33,7 @@ public class ControllerAdviceForInitBinder {
 
 	/**
 	 * {@link java.util.Date Date}クラス全般の型変換処理。
-	 * @param binder バインダー。
+	 * @param binder {@link WebDataBinder バインダー}
 	 */
 	private void registCustomDateEditor(WebDataBinder binder) {
 

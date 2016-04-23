@@ -28,7 +28,7 @@
 		-->
 		<property name="formatters">
 			<set>
-				<bean class="jp.co.sample.framework.format.ComplexAndEncryptionAnnotationFormatterFactory" />
+				<bean class="jp.co.sample.framework.format.cae.ComplexAndEncryptionAnnotationFormatterFactory" />
 			</set>
 		</property>
 	</bean>
@@ -66,7 +66,7 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/**"/>
 			<mvc:exclude-mapping path="/resources/**"/>
-			<bean class="jp.co.sample.framework.web.servlet.handler.ComplexAndEncryptionInterceptor"/>
+			<bean class="jp.co.sample.framework.web.servlet.handler.NormalInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
 

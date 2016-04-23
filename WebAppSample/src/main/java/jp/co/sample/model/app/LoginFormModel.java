@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import jp.co.sample.beans.SampleBean;
-import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
 
 /**
  * 【ログイン画面】FormModel

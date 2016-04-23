@@ -1,4 +1,4 @@
-package jp.co.sample.framework.web.bind.annotation;
+package jp.co.sample.framework.format.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -6,12 +6,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import jp.co.sample.framework.web.servlet.handler.ComplexAndEncryptionInterceptor;
+import jp.co.sample.framework.web.servlet.handler.NormalInterceptor;
 
 /**
- * 【Model内プロパティ複合化・暗号化】注釈
+ * 【プロパティ複合化・暗号化】注釈
  * @see ComplexAndEncryption
- * @see ComplexAndEncryptionInterceptor
+ * @see NormalInterceptor
  * @author shiromat55
  *
  */

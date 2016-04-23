@@ -1,4 +1,4 @@
-package jp.co.sample.framework.format;
+package jp.co.sample.framework.format.cae;
 
 import java.text.ParseException;
 import java.util.Locale;
@@ -6,7 +6,7 @@ import java.util.Locale;
 import org.springframework.format.Formatter;
 
 /**
- *
+ * 【複合化・暗号化】Formatter
  * @see ComplexAndEncryptionFormatter
  * @author shiromat55
  *
@@ -35,7 +35,6 @@ public final class ComplexAndEncryptionFormatter implements Formatter<String> {
 	 */
 	@Override
 	public String parse(String text, Locale locale) throws ParseException {
-
 
 		String result = "複：" + text + "：複";
 
