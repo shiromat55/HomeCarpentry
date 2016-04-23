@@ -62,11 +62,6 @@
 				<p style="color:yellow"></p>
 			</div>
 
-			<!-- エラーメッセージエリア -->
-			<div id="blErrorMessageArea" class="blErrorMessageArea">
-				<p style="color:red">エラーメッセージエリア</p>
-			</div>
-
 			<!-- メインコンテンツエリア -->
 			<div id="blMainContentsArea" class="blMainContentsArea">
 				<tiles:insertAttribute name="mainContents" />

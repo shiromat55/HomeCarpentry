@@ -3,23 +3,27 @@
 
  <tiles-definitions>
 
-	<definition name="hogehoge" extends="basicLayout">
+	<definition name="error/otherError" extends="basicLayout">
 
 		<!-- ページタイトル -->
-		<put-attribute name="pageTitle" value="ログイン画面"/>
+		<put-attribute name="pageTitle" value="エラー画面"/>
 
 		<!-- JSP -->
-		<put-attribute name="mainContents" value="/WEB-INF/view/app/login.jsp" />
+		<put-attribute name="mainContents" value="/WEB-INF/view/error/otherError.jsp" />
 
 		<!-- stylesheet -->
+		<!--
 		<put-list-attribute name="personalStylesheet">
-			<add-attribute value="/resources/css/app/login.css" />
+			<add-attribute value="/resources/css/app/top.css" />
 		</put-list-attribute>
+		-->
 
  		<!-- javascript -->
+ 		<!--
  		<put-list-attribute name="personalJavascript">
- 			<add-attribute value="/resources/js/app/login.js" />
+ 			<add-attribute value="/resources/js/app/top.js" />
  		</put-list-attribute>
+		-->
 
 	</definition>
 

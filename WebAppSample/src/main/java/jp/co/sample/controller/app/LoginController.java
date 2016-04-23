@@ -60,7 +60,6 @@ public class LoginController {
 
 		// ログインID、パスワードのみバインドを許可する。
 		//binder.setAllowedFields("id", "password");
-		//binder.setDisallowedFields("actionDate");
 	}
 
 	/*----------------------------------------------------------------------

@@ -37,7 +37,7 @@
 			<%-- InitBinderでバインドを拒否するためのサンプル --%>
 			<form:hidden path="actionDate" />
 
-			<%--  --%>
+			<%-- 暗号化・複合化サンプル --%>
 			<form:hidden path="caeTest" />
 
 			<c:forEach var="item" items="${formModel.sampleList}" varStatus="status">
