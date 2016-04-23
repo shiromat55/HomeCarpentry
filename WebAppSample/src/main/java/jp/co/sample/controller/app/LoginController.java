@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -22,6 +23,7 @@ import jp.co.sample.beans.LoginUserInfoBean;
 import jp.co.sample.beans.SampleBean;
 import jp.co.sample.common.util.MessageUtil;
 import jp.co.sample.constants.Message;
+import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
 import jp.co.sample.model.app.LoginFormModel;
 
 /**
@@ -93,9 +95,11 @@ public class LoginController {
 	 * @return {@link ModelAndView}
 	 */
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView index(@ModelAttribute("formModel") LoginFormModel formModel) {
+	public ModelAndView index(@ComplexAndEncryption @RequestParam("test") String param) {
 
 		ModelAndView mv = new ModelAndView();
+
+		LoginFormModel formModel = new LoginFormModel();
 
 		formModel.setCaeTest("abc12345");
 

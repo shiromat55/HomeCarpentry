@@ -29,7 +29,6 @@ public class LoginFormModel {
 	private String caeTest;
 
 	/**  */
-	@ComplexAndEncryption
 	private List<SampleBean> sampleList;
 
 	/**

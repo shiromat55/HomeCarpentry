@@ -3,7 +3,7 @@ package jp.co.sample.beans;
 import jp.co.sample.framework.web.bind.annotation.ComplexAndEncryption;
 
 public class SampleBean {
-	
+
 	/**  */
 	@ComplexAndEncryption
 	private String hoge;
@@ -23,5 +23,5 @@ public class SampleBean {
 	public void setHoge(String hoge) {
 	    this.hoge = hoge;
 	}
-	
+
 }

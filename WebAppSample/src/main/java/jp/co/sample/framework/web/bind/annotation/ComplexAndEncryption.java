@@ -16,7 +16,7 @@ import jp.co.sample.framework.web.servlet.handler.ComplexAndEncryptionIntercepto
  *
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target({ElementType.FIELD, ElementType.PARAMETER})
 @Documented
 public @interface ComplexAndEncryption {
 }

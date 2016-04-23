@@ -12,7 +12,6 @@
 
 	<!-- アノテーションによるBean登録を許可し、ベースパッケージを指定する。 -->
 	<mvc:annotation-driven conversion-service="conversionService" />
-	<!--<mvc:annotation-driven />-->
 	<context:component-scan base-package="jp.co.sample" />
 
 	<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
@@ -20,6 +19,13 @@
 	<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 
 	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<!--
+		<property name="converters">
+			<set>
+				<bean class="jp.co.sample.framework.core.convert.support.ComplexAndEncryptionConverter" />
+			</set>
+		</property>
+		-->
 		<property name="formatters">
 			<set>
 				<bean class="jp.co.sample.framework.format.ComplexAndEncryptionAnnotationFormatterFactory" />

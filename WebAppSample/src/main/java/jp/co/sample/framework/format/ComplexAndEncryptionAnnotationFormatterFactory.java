@@ -2,7 +2,6 @@ package jp.co.sample.framework.format;
 
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import org.springframework.format.AnnotationFormatterFactory;
@@ -23,8 +22,7 @@ public class ComplexAndEncryptionAnnotationFormatterFactory implements Annotatio
 	/**  */
 	private static final Set<Class<?>> TARGET_FIELD_TYPES;
 	static {
-		Set<Class<?>> formatTypes = new HashSet<>(2);
-		formatTypes.add(List.class);
+		Set<Class<?>> formatTypes = new HashSet<>(1);
 		formatTypes.add(String.class);
 		TARGET_FIELD_TYPES = Collections.unmodifiableSet(formatTypes);
 	}

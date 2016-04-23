@@ -37,11 +37,14 @@
 			<%-- InitBinderでバインドを拒否するためのサンプル --%>
 			<form:hidden path="actionDate" />
 
+			<%-- --%>
+			<form:hidden path="sampleDate"/>
+
 			<%--  --%>
 			<form:hidden path="caeTest" />
 
 			<c:forEach var="item" items="${formModel.sampleList}" varStatus="status">
-				<input type="hidden" id="sampleList[${status.index}].hoge" name="sampleList[${status.index}].hoge" value="${item.hoge}" />
+				<form:hidden path="sampleList[${status.index}].hoge" />
 			</c:forEach>
 
 			<table border="1">
