@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+ <tiles-definitions>
+
+	<definition name="angular/index" extends="basic_layout">
+
+		<!-- ページタイトル -->
+		<put-attribute name="pageTitle" value="Angularホーム"/>
+
+		<!-- JSP -->
+		<put-attribute name="mainContents" value="/WEB-INF/view/angular/index.jsp" />
+
+ 		<!-- javascript -->
+ 		<put-list-attribute name="personalJavascript">
+ 			<add-attribute value="/resources/js/angular/index.js" />
+ 		</put-list-attribute>
+
+	</definition>
+
+ </tiles-definitions>
