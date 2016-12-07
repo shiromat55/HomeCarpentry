@@ -13,11 +13,11 @@ import jp.co.sample.framework.format.annotation.CompositeEncryption;
 /**
  * 【複合化・暗号化】FormatterFactory
  *
- * @see ComplexAndEncryptionAnnotationFormatterFactory
+ * @see CompositeEncryptionAnnotationFormatterFactory
  * @author shiromat55
  *
  */
-public class ComplexAndEncryptionAnnotationFormatterFactory implements AnnotationFormatterFactory<CompositeEncryption> {
+public class CompositeEncryptionAnnotationFormatterFactory implements AnnotationFormatterFactory<CompositeEncryption> {
 
 	/** 対象フィールド型 */
 	private static final Set<Class<?>> TARGET_FIELD_TYPES;
@@ -46,7 +46,7 @@ public class ComplexAndEncryptionAnnotationFormatterFactory implements Annotatio
 	@Override
 	public Printer<String> getPrinter(CompositeEncryption annotation, Class<?> fieldType) {
 
-		return new ComplexAndEncryptionFormatter();
+		return new CompositeEncryptionFormatter();
 	}
 
 	/**
@@ -57,6 +57,6 @@ public class ComplexAndEncryptionAnnotationFormatterFactory implements Annotatio
 	@Override
 	public Parser<String> getParser(CompositeEncryption annotation, Class<?> fieldType) {
 
-		return new ComplexAndEncryptionFormatter();
+		return new CompositeEncryptionFormatter();
 	}
 }

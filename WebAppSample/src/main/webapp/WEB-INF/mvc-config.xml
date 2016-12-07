@@ -22,13 +22,13 @@
 		<!--
 		<property name="converters">
 			<set>
-				<bean class="jp.co.sample.framework.core.convert.support.ComplexAndEncryptionConverter" />
+				<bean class="jp.co.sample.framework.core.convert.support.CompositeEncryptionConverter" />
 			</set>
 		</property>
 		-->
 		<property name="formatters">
 			<set>
-				<bean class="jp.co.sample.framework.format.cae.ComplexAndEncryptionAnnotationFormatterFactory" />
+				<bean class="jp.co.sample.framework.format.cae.CompositeEncryptionAnnotationFormatterFactory" />
 			</set>
 		</property>
 	</bean>

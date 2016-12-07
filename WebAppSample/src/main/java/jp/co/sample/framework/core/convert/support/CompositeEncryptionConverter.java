@@ -12,12 +12,12 @@ import jp.co.sample.framework.format.annotation.CompositeEncryption;
 /**
  * 【複合化・暗号化】Converter
  *
- * @see ComplexAndEncryptionConverter
+ * @see CompositeEncryptionConverter
  * @author shiromat55
  *
  */
 @Description("個人的にはFormatterの方が分かり易いので非推奨！！")
-public class ComplexAndEncryptionConverter implements GenericConverter {
+public class CompositeEncryptionConverter implements GenericConverter {
 
 	/**
 	 *

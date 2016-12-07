@@ -7,11 +7,11 @@ import org.springframework.format.Formatter;
 
 /**
  * 【複合化・暗号化】Formatter
- * @see ComplexAndEncryptionFormatter
+ * @see CompositeEncryptionFormatter
  * @author shiromat55
  *
  */
-public final class ComplexAndEncryptionFormatter implements Formatter<String> {
+public final class CompositeEncryptionFormatter implements Formatter<String> {
 
 	/**
 	 * オブジェクトを文字列に変換する。<br/>
