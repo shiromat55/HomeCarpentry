@@ -3,13 +3,13 @@
 
  <tiles-definitions>
 
-	<definition name="error/otherError" extends="basicLayout">
+	<definition name="error/other_error" extends="basic_layout">
 
 		<!-- ページタイトル -->
 		<put-attribute name="pageTitle" value="エラー画面"/>
 
 		<!-- JSP -->
-		<put-attribute name="mainContents" value="/WEB-INF/view/error/otherError.jsp" />
+		<put-attribute name="mainContents" value="/WEB-INF/view/error/other_error.jsp" />
 
 		<!-- stylesheet -->
 		<!--

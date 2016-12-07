@@ -3,21 +3,22 @@
 
  <tiles-definitions>
 
- 	<definition name="basicLayout" template="/WEB-INF/view/layouts/basicLayout.jsp">
+ 	<definition name="basic_layout" template="/WEB-INF/view/layouts/basic_layout.jsp">
 
  		<!-- stylesheet -->
 		<put-list-attribute name="generalStylesheet">
 			<add-attribute value="/resources/external/jquery/jquery-ui-1.11.4.css" />
 			<add-attribute value="/resources/external/jquery/jquery-ui.structure-1.11.4.css" />
 			<add-attribute value="/resources/external/jquery/jquery-ui.theme-1.11.4.css" />
-			<add-attribute value="/resources/css/layouts/basicLayouts.css" />
+			<add-attribute value="/resources/css/layouts/basic_layout.css" />
 		</put-list-attribute>
 
  		<!-- javascript -->
  		<put-list-attribute name="generalJavascript">
  			<add-attribute value="/resources/external/jquery/jquery-2.2.3.min.js" />
  			<add-attribute value="/resources/external/jquery/jquery-ui.min-1.11.4.js" />
- 			<add-attribute value="/resources/js/layouts/basicLayout.js" />
+ 			<add-attribute value="/resources/js/common/framework.js" />
+ 			<add-attribute value="/resources/js/layouts/basic_layout.js" />
  		</put-list-attribute>
 
  	</definition>

@@ -3,10 +3,10 @@
 
  <tiles-definitions>
 
-	<definition name="app/top" extends="basicLayout">
+	<definition name="app/top" extends="basic_layout">
 
 		<!-- ページタイトル -->
-		<put-attribute name="pageTitle" value="トップページ"/>
+		<put-attribute name="pageTitle" value="トップページHOGE"/>
 
 		<!-- JSP -->
 		<put-attribute name="mainContents" value="/WEB-INF/view/app/top.jsp" />

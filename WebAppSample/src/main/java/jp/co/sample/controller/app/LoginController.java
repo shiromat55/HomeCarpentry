@@ -101,7 +101,7 @@ public class LoginController {
 
 		formModel.setCaeTest("abc12345");
 
-		formModel.setSampleList(new ArrayList<>());
+		formModel.setSampleList(new ArrayList<SampleBean>());
 
 		SampleBean sample = new SampleBean();
 		sample.setHoge("hoge");
