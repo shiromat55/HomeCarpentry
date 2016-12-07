@@ -10,4 +10,8 @@
 	<%-- JQueryUIのDatePickerを使ってみる --%>
 	<input type="text" id="dateText" size="20" />
 
+	<form:input path="name"/>
+
+	<form:button id="send" name="send">送信</form:button>
+
 </form:form>

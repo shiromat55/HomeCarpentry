@@ -25,6 +25,6 @@ public class OhterErrorController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(Model model) {
 
-		return "error/otherError";
+		return "error/other_error";
 	}
 }
