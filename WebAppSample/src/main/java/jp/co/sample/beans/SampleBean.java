@@ -1,6 +1,6 @@
 package jp.co.sample.beans;
 
-import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.CompositeEncryption;
 
 /**
  * 【サンプル】Bean
@@ -12,7 +12,7 @@ import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
 public class SampleBean {
 
 	/** hoge */
-	@ComplexAndEncryption
+	@CompositeEncryption
 	private String hoge;
 
 	/**

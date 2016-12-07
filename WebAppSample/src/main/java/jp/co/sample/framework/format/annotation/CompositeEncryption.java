@@ -10,7 +10,7 @@ import jp.co.sample.framework.web.servlet.handler.NormalInterceptor;
 
 /**
  * 【プロパティ複合化・暗号化】注釈
- * @see ComplexAndEncryption
+ * @see CompositeEncryption
  * @see NormalInterceptor
  * @author shiromat55
  *
@@ -18,5 +18,5 @@ import jp.co.sample.framework.web.servlet.handler.NormalInterceptor;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Documented
-public @interface ComplexAndEncryption {
+public @interface CompositeEncryption {
 }

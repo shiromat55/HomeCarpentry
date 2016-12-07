@@ -8,7 +8,7 @@ import org.springframework.format.AnnotationFormatterFactory;
 import org.springframework.format.Parser;
 import org.springframework.format.Printer;
 
-import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.CompositeEncryption;
 
 /**
  * 【複合化・暗号化】FormatterFactory
@@ -17,7 +17,7 @@ import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
  * @author shiromat55
  *
  */
-public class ComplexAndEncryptionAnnotationFormatterFactory implements AnnotationFormatterFactory<ComplexAndEncryption> {
+public class ComplexAndEncryptionAnnotationFormatterFactory implements AnnotationFormatterFactory<CompositeEncryption> {
 
 	/** 対象フィールド型 */
 	private static final Set<Class<?>> TARGET_FIELD_TYPES;
@@ -44,7 +44,7 @@ public class ComplexAndEncryptionAnnotationFormatterFactory implements Annotatio
 	 * @see org.springframework.format.AnnotationFormatterFactory#getPrinter(java.lang.annotation.Annotation, java.lang.Class)
 	 */
 	@Override
-	public Printer<String> getPrinter(ComplexAndEncryption annotation, Class<?> fieldType) {
+	public Printer<String> getPrinter(CompositeEncryption annotation, Class<?> fieldType) {
 
 		return new ComplexAndEncryptionFormatter();
 	}
@@ -55,7 +55,7 @@ public class ComplexAndEncryptionAnnotationFormatterFactory implements Annotatio
 	 * @see org.springframework.format.AnnotationFormatterFactory#getParser(java.lang.annotation.Annotation, java.lang.Class)
 	 */
 	@Override
-	public Parser<String> getParser(ComplexAndEncryption annotation, Class<?> fieldType) {
+	public Parser<String> getParser(CompositeEncryption annotation, Class<?> fieldType) {
 
 		return new ComplexAndEncryptionFormatter();
 	}

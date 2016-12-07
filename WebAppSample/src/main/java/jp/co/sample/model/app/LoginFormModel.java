@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import jp.co.sample.beans.SampleBean;
-import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.CompositeEncryption;
 
 /**
  * 【ログイン画面】FormModel
@@ -25,7 +25,7 @@ public class LoginFormModel {
 	private Date actionDate;
 
 	/** 複合化／暗号化項目 */
-	@ComplexAndEncryption
+	@CompositeEncryption
 	private String caeTest;
 
 	/**  */

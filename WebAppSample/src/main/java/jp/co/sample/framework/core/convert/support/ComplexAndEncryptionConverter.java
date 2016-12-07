@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Description;
 import org.springframework.core.convert.TypeDescriptor;
 import org.springframework.core.convert.converter.GenericConverter;
 
-import jp.co.sample.framework.format.annotation.ComplexAndEncryption;
+import jp.co.sample.framework.format.annotation.CompositeEncryption;
 
 /**
  * 【複合化・暗号化】Converter
@@ -42,12 +42,12 @@ public class ComplexAndEncryptionConverter implements GenericConverter {
 	@Override
 	public Object convert(Object source, TypeDescriptor sourceType, TypeDescriptor targetType) {
 
-		if (targetType.hasAnnotation(ComplexAndEncryption.class)) {
+		if (targetType.hasAnnotation(CompositeEncryption.class)) {
 			// ■リクエスト → Model
 
 			return "複：" + source + "：複";
 
-		} else if (sourceType.hasAnnotation(ComplexAndEncryption.class)) {
+		} else if (sourceType.hasAnnotation(CompositeEncryption.class)) {
 			// ■レスポンス ← Model
 
 			return "暗：" + source + "：暗";
